@@ -1,0 +1,10 @@
+function getCurrentDateFormats() {
+    const now = new Date();
+    const dd_mm_yyyy = `${String(now.getDate()).padStart(2, '0')}/${String(now.getMonth() + 1).padStart(2, '0')}/${now.getFullYear()}`;
+    const mm_dd_yyyy = `${String(now.getMonth() + 1).padStart(2, '0')}/${String(now.getDate()).padStart(2, '0')}/${now.getFullYear()}`;
+    const yyyy_mm_dd = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+    return { dd_mm_yyyy, mm_dd_yyyy, yyyy_mm_dd };
+}
+
+// Example usage:
+console.log(getCurrentDateFormats()); // Output: { dd_mm_yyyy: "14/03/2024", mm_dd_yyyy: "03/14/2024", yyyy_mm_dd: "2024-03-14" }
